@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://1596832448211.png" type="Texture" id=1]
+[ext_resource path="res://coollogo_com-27532862.png" type="Texture" id=2]
+[ext_resource path="res://loading screen.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Hide"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="loading screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="visual" type="Control" parent="."]
+margin_right = 766.0
+margin_bottom = 1203.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="visual"]
+margin_left = -1098.0
+margin_right = 2220.0
+margin_bottom = 1206.0
+color = Color( 0.168627, 0.913725, 0.737255, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="visual"]
+position = Vector2( 359.945, 489.488 )
+scale = Vector2( 0.910128, 0.811905 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="Sprite2" type="Sprite" parent="visual"]
+position = Vector2( 379.376, 248.908 )
+scale = Vector2( 0.532206, 0.851555 )
+texture = ExtResource( 2 )
+
+[node name="LoadingBar" type="ProgressBar" parent="."]
+margin_left = 29.5992
+margin_top = 700.899
+margin_right = 724.599
+margin_bottom = 744.899
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 0.0156863, 0.0156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadTween" type="Tween" parent="."]
+
+[node name="LoadScreenAnim" type="AnimationPlayer" parent="."]
+anims/Hide = SubResource( 1 )
