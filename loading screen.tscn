@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="loading screen" type="Control"]
+[node name="LoadingScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
@@ -54,7 +54,7 @@ position = Vector2( 379.376, 248.908 )
 scale = Vector2( 0.532206, 0.851555 )
 texture = ExtResource( 2 )
 
-[node name="LoadingBar" type="ProgressBar" parent="."]
+[node name="LoadingBar" type="ProgressBar" parent="visual"]
 margin_left = 29.5992
 margin_top = 700.899
 margin_right = 724.599

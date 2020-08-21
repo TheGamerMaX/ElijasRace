@@ -31,24 +31,24 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="Character" type="KinematicBody2D" parent="."]
 position = Vector2( -34.0438, 140.371 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+[node name="Sprite" type="Sprite" parent="Character"]
 position = Vector2( 72.1326, -44.2817 )
 scale = Vector2( 0.494188, 0.355507 )
 texture = ExtResource( 1 )
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
 position = Vector2( 66.7985, -41.5885 )
 shape = SubResource( 1 )
 
-[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+[node name="Camera2D" type="Camera2D" parent="Character"]
 current = true
 limit_smoothed = true
 smoothing_enabled = true
